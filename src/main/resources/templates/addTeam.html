@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>
+        Team
+        </title>
+    </head>
+    <body>
+        <h1> New team </h1>
+    <form th:action="@{/team/add}" method="POST" th:object="${team}">
+        <div>
+            <label for = "name">Team name</label>
+            <input type="text" th:field="*{name}" id = "name" name = "name">
+
+            <label for = "name">Member Count</label>
+            <input type="text" th:field="*{memberCount}" id = "count" name = "count">
+        </div>
+        <div>
+            <button type = "submit">Save</button>
+        </div>
+    </form>
+        
+  
+    </body>
+</html>
